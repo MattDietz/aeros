@@ -10,7 +10,6 @@ import aeros.common
 import aeros.shapes
 
 
-
 DISPLAY_DIMENSIONS = (800, 800)
 
 fill_colors = pygame.color.THECOLORS
@@ -43,7 +42,7 @@ def add_plane(space, start_x, end_x, start_y, end_y):
     p2 = (end_x, aeros.common.flipy(end_y))
     shape = pymunk.Segment(body, p1, p2, 0.0)
     shape.friction = 1.0
-    space.add_static(shape)
+    space.add(shape)
     rect = pygame.Rect(start_x, start_y, end_x-start_x, end_y-start_y)
     rect_actor = actor.RectangleActor(shape, body, pygame.Color(0,0,255,1),
                                       rect)

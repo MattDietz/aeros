@@ -21,7 +21,6 @@ def init_pygame(context):
 
 
 def init_pymunk():
-    pymunk.init_pymunk()
     space = pymunk.Space()
     space.gravity = pymunk.Vec2d(0.0, -900)
     return space
